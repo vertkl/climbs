@@ -1,6 +1,6 @@
 (ns climbs.views
   (:use [ring.util.response]
-        [climbs.endjinn])
+        [endjinn.web])
   (:require [climbs.db :as db]
             [climbs.query :as query]))
 

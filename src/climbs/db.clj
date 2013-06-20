@@ -5,7 +5,7 @@
   (:use     [monger.command :only [db-stats collection-stats top]]
             [monger.conversion :only [from-db-object]]
             [clj-time.core :only [now]]
-            [climbs.endjinn :only [load-config]]))
+            [endjinn.config :only [load-config]]))
 
 
 

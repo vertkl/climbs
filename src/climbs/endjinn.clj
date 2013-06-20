@@ -1,5 +1,5 @@
 (ns climbs.endjinn
-  (require [clj-yaml.core :as yaml]
+  (:require [clj-yaml.core :as yaml]
            [clojure.set :as set]))
 
 (defn local-url 
@@ -13,3 +13,5 @@
 (defn tags-match? [tags & match]
   (let [match-tags (apply hash-set match)]
     (= (count match) (count (set/intersection tags match-tags)))))
+
+

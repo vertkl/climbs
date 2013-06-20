@@ -1,5 +1,6 @@
 (ns climbs.query
-  (:use [climbs.endjinn :only [tags-match?]]))
+  (:use [endjinn.protocol
+ :only [tags-match?]]))
 
 
 (defn climb-query? [tags]

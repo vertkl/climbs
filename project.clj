@@ -15,6 +15,7 @@
                            [ring-mock "0.1.3"]
                            [ring/ring-json "0.1.2"]
                            [ring/ring-jetty-adapter "1.1.4"]
+                           [endjinn "0.1.0-SNAPSHOT"]
                            ]
             :ring {:handler climbs.server/app}
             :plugins [[lein-midje "2.0.1"]
