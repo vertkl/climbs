@@ -52,7 +52,7 @@
              :home (local-url request)}))
 
 (defn get-crags [request]
-  (response (array-map :is ["crag" "queryable" "list"]
+  (response (array-map :is ["queryable" "crag" "list"]
                        :numberOfItems 333)))
 
 (defn get-crag [request]
