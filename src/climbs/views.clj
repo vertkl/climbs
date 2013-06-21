@@ -24,7 +24,7 @@
              :climbs (db/climbs-metrics)}))
 
 (defn get-climbs [request]
-  (response (array-map :is ["climb" "queryable" "list"]
+  (response (array-map :is ["queryable" "climb" "list"]
                        :numberOfItems 12333)))
 
 (defn post-climbs [request]
