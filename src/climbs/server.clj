@@ -22,7 +22,20 @@
   (context "/climbs" []
            (defroutes climbs-routes
              (GET "/" request (v/get-climbs request))
-             (POST "/" request (v/post-climbs request)))))
+             (POST "/" request (v/post-climbs request))))
+
+  (context "/climbs/:id" [id]
+           (defroutes climb-route
+             (GET "/" request (v/get-climb request))))
+
+  (context "/crags" []
+           (defroutes climbs-routes
+             (GET "/" request (v/get-crags request))))
+
+  (context "/crags/:id" [id]
+           (defroutes climb-route
+             (GET "/" request (v/get-crag request)))))
+
 
 (def app
   (-> (handler/api app-routes)
@@ -31,7 +44,9 @@
       ;;(v/request-printer)
       ))
 
+
 (defn -main [& args]
   (if (not (empty? args))
     (jetty/run-jetty app {:port (read-string (first args))})
-    (jetty/run-jetty app {:port 8080})))
+    (jetty/run-jetty app {:port 8090}))
+)
